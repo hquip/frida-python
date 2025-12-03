@@ -23,7 +23,7 @@ class Application:
         if ENABLE_CONTROL_INTERFACE:
             www = Path(__file__).parent.resolve() / "web_client" / "dist"
             control_params = frida.EndpointParameters(
-                address="::1", port=27042, authentication=("callback", self._authenticate), asset_root=www
+                address="::1", port=19999, authentication=("callback", self._authenticate), asset_root=www
             )
         else:
             control_params = None
